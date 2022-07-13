@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins:ital,wght@0,600;1,300;1,500&display=swap");
+
+@-ms-viewport {
+  inline-size: device-width;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 20px;
+}
+body {
+  inline-size: 100%;
+  block-size: 100vh;
+  background-color: hsl(208, 100%, 97%);
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  inline-size: 100%;
+  block-size: 100vh;
+}
+.imgholder {
+  display: block;
+}
+
+.imgholder img {
+  display: block;
+  max-inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  line-height: 0;
+}
+
+.contentbx {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.contentbx h4 {
+  font-size: 1.5rem;
+}
+
+.contentbx h4 span {
+  color: hsl(240, 100%, 50%);
+}
+
+.contentbx h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 1px;
+}
+
+.contentbx p {
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 1px;
+  color: black;
+  text-shadow: none;
+  animation: type2 2.2s steps(40, end);
+}
+
+.contentbx h1 {
+  border-right: 0.15em solid hsl(240, 100%, 50%);
+  font-family: "Poppins";
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.contentbx h1 {
+  width: 23.5rem;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.contactinfo {
+  margin-top: 10px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.contactinfo span {
+  color: hsl(240, 100%, 50%);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.contactinfo a {
+  font-size: 2rem;
+  list-style: none;
+  cursor: pointer;
+  padding: 15px;
+  margin-left: 8px;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15em solid blue;
+  }
+  100% {
+    border: none;
+  }
+}
+
+/* Responsive */
+
+@media screen and (max-width: 850px) {
+  section.main {
+    flex-direction: column;
+  }
+
+  picture.imgholder {
+    block-size: 40%;
+  }
+
+  picture.imgholder img {
+    width: 850px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: top right;
+  }
+
+  .contentbx {
+    padding: 1rem;
+  }
+
+  .contentbx h1 {
+    font-size: 1.5rem;
+    width: 14rem;
+  }
+
+  .contentbx p {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  .contactinfo span {
+    font-size: 1rem;
+    margin-top: 2px;
+  }
+
+  .contactinfo a {
+    font-size: 1.5rem;
+    padding: 7px;
+    margin-left: 7px;
+  }
+}
